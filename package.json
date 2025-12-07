@@ -1,0 +1,19 @@
+{
+  "name": "lifeday",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "build": "tsc --project tsconfig.json",
+    "validate": "tsx validate.ts",
+    "validate:example": "tsx validate.ts examples/example-lifeday.json",
+    "test": "npm run validate:example"
+  },
+  "dependencies": {
+    "ajv": "^8.17.0",
+    "ajv-formats": "^3.0.1"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}
