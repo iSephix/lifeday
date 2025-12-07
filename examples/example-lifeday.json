@@ -1,0 +1,164 @@
+{
+  "id": "lifeday_0001",
+  "date": "2025-12-03",
+  "created_at": "2025-12-03T08:10:00+01:00",
+  "updated_at": "2025-12-03T09:00:00+01:00",
+  "checksum": "sha256:abcdef0123456789",
+  "meta": {
+    "schema_version": "0.1",
+    "person_id": "user_123",
+    "timezone": "Europe/Berlin",
+    "validation_level": "basic",
+    "consent": {
+      "consented": true,
+      "version": "2025-12-03:v0",
+      "scope": "labs wearables",
+      "consented_at": "2025-12-03T08:00:00+01:00"
+    }
+  },
+  "provenance": [
+    {
+      "actor": "Oura",
+      "role": "device",
+      "imported_at": "2025-12-03T07:30:00+01:00"
+    },
+    {
+      "actor": "ImportScript_v1",
+      "role": "importer",
+      "imported_at": "2025-12-03T08:05:00+01:00",
+      "description": "Merged AppleHealth steps + Oura sleep"
+    }
+  ],
+  "sleep": [
+    {
+      "id": "sleep_1",
+      "external_id": "oura:abcdef",
+      "start": "2025-12-02T23:45:00+01:00",
+      "end": "2025-12-03T07:15:00+01:00",
+      "duration_min": {
+        "value": 450,
+        "unit_code": "min",
+        "source": "Oura",
+        "quality": "measured",
+        "granularity": "session",
+        "captured_at": "2025-12-03T07:20:00+01:00",
+        "measurement_quality": {
+          "accuracy": 5,
+          "accuracy_unit_code": "min",
+          "resolution": 1,
+          "vendor_grade": "consumer",
+          "firmware_version": "2.7.3"
+        }
+      },
+      "deep_min": {
+        "value": 90,
+        "unit_code": "min",
+        "source": "Oura",
+        "quality": "measured"
+      },
+      "rem_min": {
+        "value": 110,
+        "unit_code": "min",
+        "source": "Oura",
+        "quality": "measured"
+      }
+    }
+  ],
+  "activity": {
+    "steps": {
+      "value": 10523,
+      "unit_code": "{count}",
+      "source": "AppleHealth",
+      "quality": "measured",
+      "granularity": "day",
+      "confidence": 0.98
+    },
+    "active_min": {
+      "value": 62,
+      "unit_code": "min",
+      "source": "AppleHealth",
+      "quality": "measured",
+      "granularity": "day"
+    }
+  },
+  "body": {
+    "weight_kg": {
+      "value": 74.2,
+      "unit_code": "kg",
+      "source": "manual",
+      "quality": "self_reported",
+      "captured_at": "2025-12-03T08:00:00+01:00"
+    },
+    "resting_hr": {
+      "value": 52,
+      "unit_code": "{beats}/min",
+      "source": "Oura",
+      "quality": "measured"
+    }
+  },
+  "mind": {
+    "mood_score": {
+      "value": 1,
+      "source": "manual",
+      "quality": "self_reported",
+      "granularity": "day"
+    },
+    "deep_work_min": {
+      "value": 180,
+      "unit_code": "min",
+      "source": "manual",
+      "quality": "self_reported"
+    }
+  },
+  "substances": {
+    "caffeine_mg": {
+      "value": 240,
+      "unit_code": "mg",
+      "source": "manual",
+      "quality": "self_reported"
+    }
+  },
+  "nutrition": {
+    "calories_kcal": {
+      "value": 2300,
+      "unit_code": "kcal",
+      "source": "manual",
+      "quality": "self_reported"
+    },
+    "protein_g": {
+      "value": 130,
+      "unit_code": "g",
+      "source": "manual",
+      "quality": "self_reported"
+    }
+  },
+  "notes": "Good sleep, solid focus, no alcohol.",
+  "extensions": {
+    "labs": {
+      "panels": [
+        {
+          "name": "Lipid Panel",
+          "provider": "lab:Synlab",
+          "taken_at": "2025-12-03T09:30:00+01:00",
+          "markers": [
+            {
+              "code": "LDL-C",
+              "label": "LDL Cholesterol",
+              "value": {
+                "value": 95,
+                "unit_code": "mg/dL",
+                "source": "lab:Synlab",
+                "quality": "measured"
+              },
+              "reference_range": {
+                "low": 0,
+                "high": 130,
+                "unit_code": "mg/dL"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
