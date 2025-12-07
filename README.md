@@ -1,4 +1,4 @@
-# Lifeday v0.2.0
+# Lifeday v0.3.0
 
 Minimal, opinionated, extensible daily data format for health, performance, and longevity tracking.
 
@@ -29,7 +29,7 @@ The Lifeday schema is documented in the [`docs`](./docs) folder. The documentati
 
 ## Structure
 
--   `src/lifeday.v0.1.schema.json` — canonical JSON Schema (draft 2020-12).
+-   `src/lifeday.v0.3.0.schema.json` — canonical JSON Schema (draft 2020-12).
 -   `src/index.ts` — main package entry point.
 -   `src/validate.ts` — small validation CLI using AJV.
 -   `examples/` — example Lifeday documents.
