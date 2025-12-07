@@ -5,7 +5,7 @@
   "updated_at": "2025-12-03T09:00:00+01:00",
   "checksum": "sha256:abcdef0123456789",
   "meta": {
-    "schema_version": "0.1",
+    "schema_version": "0.3.0",
     "person_id": "user_123",
     "timezone": "Europe/Berlin",
     "validation_level": "basic",
@@ -109,6 +109,36 @@
       "source": "manual",
       "quality": "self_reported"
     }
+  },
+  "environment": {
+    "air_quality_index": {
+      "value": 42,
+      "unit_code": "{score}",
+      "source": "local-weather-station",
+      "quality": "measured"
+    }
+  },
+  "genetics": {
+    "genetic_markers": [
+      {
+        "marker_id": "rs12345",
+        "gene": "GENE1",
+        "variant": "A/G",
+        "description": "Associated with caffeine metabolism"
+      }
+    ]
+  },
+  "wearables": {
+    "device_data": [
+      {
+        "device_id": "oura-123",
+        "manufacturer": "Oura",
+        "model": "Ring Gen3",
+        "data": {
+          "readiness_score": 85
+        }
+      }
+    ]
   },
   "substances": {
     "caffeine_mg": {
