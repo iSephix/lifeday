@@ -1,18 +1,29 @@
 {
   "name": "lifeday",
-  "version": "0.1.0",
+  "version": "0.2.0",
+  "description": "Minimal, opinionated, extensible daily data format for health, performance, and longevity tracking.",
   "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src/lifeday.v0.1.schema.json"
+  ],
   "scripts": {
-    "build": "tsc --project tsconfig.json",
-    "validate": "tsx validate.ts",
-    "validate:example": "tsx validate.ts examples/example-lifeday.json",
-    "test": "npm run validate:example"
+    "prebuild": "rm -rf dist",
+    "build": "npm run docs:generate && tsc --project tsconfig.json",
+    "validate": "tsx src/validate.ts",
+    "validate:example": "tsx src/validate.ts examples/example-lifeday.json",
+    "test": "npm run validate:example",
+    "docs:generate": "jsonschema2md -d src -o docs"
   },
   "dependencies": {
     "ajv": "^8.17.0",
     "ajv-formats": "^3.0.1"
   },
   "devDependencies": {
+    "@adobe/jsonschema2md": "^8.0.8",
+    "@types/node": "^24.10.1",
     "tsx": "^4.19.0",
     "typescript": "^5.6.0"
   }

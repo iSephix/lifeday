@@ -1,13 +1,13 @@
 import fs from "node:fs";
 import path from "node:path";
 import process from "node:process";
-import Ajv from "ajv";
+import Ajv from "ajv/dist/2020.js";
 import addFormats from "ajv-formats";
 
-const ajv = new Ajv({ allErrors: true, strict: true });
+const ajv = new Ajv({ allErrors: true, strict: true, allowUnionTypes: true });
 addFormats(ajv);
 
-const schemaPath = path.resolve("lifeday.v0.1.json");
+const schemaPath = path.resolve("src/lifeday.v0.1.schema.json");
 if (!fs.existsSync(schemaPath)) {
   console.error(`Schema not found at ${schemaPath}`);
   process.exit(2);
